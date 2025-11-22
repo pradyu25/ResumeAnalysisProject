@@ -1,0 +1,22 @@
+<!-- ResumeAnalysisApp/templates/Feedback.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Feedback</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/Feedback.css' %}">
+</head>
+<body>
+    <h1>Feedback</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="t1">Feedback:</label>
+        <textarea id="t1" name="t1"></textarea><br><br>
+        <label for="t2">Feedback Rank (1-5):</label>
+        <input type="number" id="t2" name="t2" min="1" max="5"><br><br>
+        <button type="submit">Submit Feedback</button>
+    </form>
+    <a href="{% url 'index' %}">Back to Home</a>
+</body>
+</html>
+

@@ -1,0 +1,30 @@
+<!-- ResumeAnalysisApp/templates/ViewFeedback.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Feedback</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ViewFeedback.css' %}">
+</head>
+<body>
+    <h1>View Feedback</h1>
+    <table border="1">
+        <tr>
+            <th>Username</th>
+            <th>Feedback</th>
+            <th>Date</th>
+            <th>Rank</th>
+        </tr>
+        {% for feedback in feedbacks %}
+        <tr>
+            <td>{{ feedback.username }}</td>
+            <td>{{ feedback.feedback }}</td>
+            <td>{{ feedback.feedback_date }}</td>
+            <td>{{ feedback.feedback_rank }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'index' %}">Back to Home</a>
+</body>
+</html>
+

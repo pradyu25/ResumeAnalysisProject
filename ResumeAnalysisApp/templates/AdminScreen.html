@@ -1,0 +1,25 @@
+<!-- ResumeAnalysisApp/templates/AdminScreen.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Screen</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/AdminScreen.css' %}">
+</head>
+<body>
+    <h1>Admin Screen</h1>
+    
+    <div class="admin-panel">
+        <h2>Welcome, Admin</h2>
+        <ul>
+            <li><a href="{% url 'post_jobs' %}">Post Jobs</a></li>
+            <li><a href="{% url 'view_feedback' %}">View Feedback</a></li>
+            <li><a href="{% url 'view_jobs' %}">View Jobs</a></li>
+            <li><a href="{% url 'view_score' %}">View Resume Scores</a></li>
+        </ul>
+    </div>
+
+    <a href="{% url 'index' %}">Go to Dashboard</a>
+</body>
+</html>
+

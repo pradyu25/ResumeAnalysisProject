@@ -1,0 +1,22 @@
+<!-- ResumeAnalysisApp/templates/UploadResume.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Upload Resume</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/UploadResume.css' %}">
+</head>
+<body>
+    <h1>Upload Resume</h1>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <label for="t1">Job ID:</label>
+        <input type="text" id="t1" name="t1"><br><br>
+        <label for="t2">Upload Resume:</label>
+        <input type="file" id="t2" name="t2"><br><br>
+        <button type="submit">Upload</button>
+    </form>
+    <a href="{% url 'index' %}">Back to Home</a>
+</body>
+</html>
+

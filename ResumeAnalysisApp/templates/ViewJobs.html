@@ -1,0 +1,34 @@
+<!-- ResumeAnalysisApp/templates/ViewJobs.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Jobs</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/ViewJobs.css' %}">
+</head>
+<body>
+    <h1>View Jobs</h1>
+    <table border="1">
+        <tr>
+            <th>Job ID</th> 
+            <th>Job Name</th>
+            <th>Job Details</th>
+            <th>Skills</th>
+            <th>Company</th>
+            <th>Salary</th>
+        </tr>
+        {% for job in jobs %}
+        <tr>
+            <td>{{ job.id }}</td> 
+            <td>{{ job.job_name }}</td>
+            <td>{{ job.job_details }}</td>
+            <td>{{ job.skills }}</td>
+            <td>{{ job.company_name }}</td>
+            <td>{{ job.salary }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="{% url 'index' %}">Back to Home</a>
+</body>
+</html>
+

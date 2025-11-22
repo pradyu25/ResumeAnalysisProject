@@ -1,0 +1,28 @@
+<!-- ResumeAnalysisApp/templates/PostJobs.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Post Jobs</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/PostJobs.css' %}">
+</head>
+<body>
+    <h1>Post Jobs</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="t1">Job Name:</label>
+        <input type="text" id="t1" name="t1"><br><br>
+        <label for="t2">Job Details:</label>
+        <textarea id="t2" name="t2"></textarea><br><br>
+        <label for="t3">Company Name:</label>
+        <input type="text" id="t3" name="t3"><br><br>
+        <label for="t4">Salary:</label>
+        <input type="text" id="t4" name="t4"><br><br>
+        <label for="t5">Skills (comma separated):</label>
+        <input type="text" id="t5" name="t5"><br><br>
+        <button type="submit">Post Job</button>
+    </form>
+    <a href="{% url 'index' %}">Back to Home</a>
+</body>
+</html>
+

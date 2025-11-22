@@ -1,0 +1,22 @@
+<!-- ResumeAnalysisApp/templates/UserLogin.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Login</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/UserLogin.css' %}">
+</head>
+<body>
+    <h1>User Login</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
+        <button type="submit">Login</button>
+    </form>
+    <a href="{% url 'index' %}">Back to Home</a>
+</body>
+</html>
+
