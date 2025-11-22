@@ -1,0 +1,15 @@
+<!-- ResumeAnalysisApp/templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Resume Analysis</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/index.css' %}">
+</head>
+<body>
+    <h1>Welcome to Resume Analysis</h1>
+    <a href="{% url 'admin_login' %}">Admin Login</a>
+    <a href="{% url 'user_login' %}">User Login</a>
+    <a href="{% url 'signup' %}">Signup</a>
+</body>
+</html>
