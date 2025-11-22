@@ -1,0 +1,42 @@
+/* ResumeAnalysisApp/static/css/Logout.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.logout-container {
+    text-align: center;
+    background-color: #fff;
+    padding: 40px;
+    border: 1px solid #dee2e6;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.logout-container h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.logout-container p {
+    color: #666;
+    margin-bottom: 30px;
+}
+
+.home-link {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.home-link:hover {
+    text-decoration: underline;
+}
+
